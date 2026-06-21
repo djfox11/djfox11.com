@@ -7,22 +7,525 @@
     <title>djfox11 | Home</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/font.css">
+    <link rel="stylesheet" href="/assets/css/cards.css">
+    <link rel="stylesheet" href="/assets/css/footer.css"
+
 </head>
 
-<body>
-    <header>
-        <p>djfox11.com</p>
+<body style="background-color: #000;">
+    <header class="site-header">
+        <a href="/index.html" class="site-logo">djfox11.com</a>
 
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/tutorials/index.html" class="active">Tutorials</a></li>
                 <li><a href="/projects/index.html">Projects</a></li>
+                <li><a href="/tutorials/index.html" class="active">Tutorials</a></li>
                 <li><a href="/tmr/index.html">The Models Resource</a></li>
                 <li><a href="/contact/index.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <section class="tutorials-page-header">
+        <h1>Model Ripping Tutorials</h1>
+        <p>
+            Learn how to extract models from your favourite games with clear,
+            in-depth written tutorials.
+        </p>
+    </section>
+
+    <p class="filter-results" id="filter-results" aria-live="polite"></p>
+
+    <div class="cards-grid-container">
+
+        <article class="badge-card" data-platform="switch" data-difficulty="advanced" data-developer="next-level-games">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/lm3.webp" alt="Luigi's Mansion 3">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-advanced">Advanced</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Luigi's Mansion 3</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Next Level Games</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="camelot">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/mgsr.webp" alt="Mario Golf: Super Rush">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Mario Golf: Super Rush</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Camelot</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/mk8d.webp" alt="Mario Kart 8 Deluxe">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Mario Kart 8 Deluxe</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="camelot">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/mta.webp" alt="Mario Tennis Aces">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Mario Tennis Aces</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Camelot</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/mvsdk.webp" alt="Mario vs. Donkey Kong">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Mario vs. Donkey Kong</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="moderate" data-developer="good-feel">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/pps.webp" alt="Princess Peach: Showtime!">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-moderate">Moderate</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Princess Peach: Showtime!</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Good-Feel</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/sm3dwbf.webp"
+                        alt="Super Mario 3D World + Bowser's Fury">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Mario 3D World + Bowser's Fury</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/smbw.webp" alt="Super Mario Bros. Wonder">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Mario Bros. Wonder</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/smo.webp" alt="Super Mario Odyssey">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Mario Odyssey</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="moderate"
+            data-developer="bandai-namco-sora">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/ssbu.webp" alt="Super Smash Bros. Ultimate">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-moderate">Moderate</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Smash Bros. Ultimate</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Bandai Namco / Sora Ltd.</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/botw.webp"
+                        alt="The Legend of Zelda: Breath of the Wild">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">The Legend of Zelda: Breath of the Wild</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="switch" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/totk.webp"
+                        alt="The Legend of Zelda: Tears of the Kingdom">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Switch</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">The Legend of Zelda: Tears of the Kingdom</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="wii" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/smg.webp" alt="Super Mario Galaxy">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Wii</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Mario Galaxy</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="wii" data-difficulty="easy" data-developer="nintendo">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/smg2.webp" alt="Super Mario Galaxy 2">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">Wii</span>
+                        <span class="badge badge-difficulty badge-easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Super Mario Galaxy 2</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Nintendo</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="pc" data-difficulty="moderate" data-developer="square-enix">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/ff7remake.webp"
+                        alt="Final Fantasy VII Remake">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">PC</span>
+                        <span class="badge badge-difficulty badge-moderate">Moderate</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Final Fantasy VII Remake</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Square Enix</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="badge-card" data-platform="pc" data-difficulty="moderate" data-developer="square-enix">
+            <a href="#" class="badge-card-link">
+
+                <div class="badge-card-image-wrap">
+                    <img class="badge-card-image" src="/assets/images/games/ff7rebirth.webp"
+                        alt="Final Fantasy VII Rebirth">
+                    <div class="badge-card-badges">
+                        <span class="badge badge-platform">PC</span>
+                        <span class="badge badge-difficulty badge-moderate">Moderate</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-content">
+                    <h3 class="badge-card-title">Final Fantasy VII Rebirth</h3>
+                    <p class="badge-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        impedit corrupti et perspiciatis! Eveniet, molestias!</p>
+                    <div class="badge-card-tools">
+                        <span class="tool-tag">Square Enix</span>
+                    </div>
+                </div>
+
+                <div class="badge-card-footer">
+                    <span class="badge-card-footer-label">View guide</span>
+                    <span class="badge-card-footer-arrow">→</span>
+                </div>
+            </a>
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+
+            <section class="footer-brand">
+                <a href="/index.html" class="footer-logo">djfox11.com</a>
+                <p>
+                    Game asset research, model ripping tutorials, projects,
+                    and technical notes.
+                </p>
+            </section>
+
+            <nav class="footer-section" aria-label="Footer site navigation">
+                <h2>Site</h2>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/projects/index.html">Projects</a></li>
+                    <li><a href="/tutorials/index.html">Tutorials</a></li>
+                    <li><a href="/tmr/index.html">TMR</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-section">
+                <h2>Topics</h2>
+                <ul>
+                    <li><a href="/tutorials/index.html">Model ripping</a></li>
+                    <li><a href="/projects/index.html">Web projects</a></li>
+                    <li><a href="/tmr/index.html">The Models Resource</a></li>
+                    <li><a href="/tutorials/index.html">Game tools</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h2>Socials</h2>
+                <ul>
+                    <li><a href="https://www.models-resource.com/" target="_blank" rel="noopener noreferrer">The Models
+                            Resource</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 djfox11</p>
+        </div>
+    </footer>
 </body>
 
 </html>
