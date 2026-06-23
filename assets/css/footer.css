@@ -11,8 +11,9 @@
     padding: 3rem 2rem;
 
     display: grid;
-    grid-template-columns: minmax(260px, 1.4fr) repeat(3, minmax(150px, 0.6fr));
-    gap: 2rem;
+    grid-template-columns: minmax(260px, 1fr) auto auto;
+    gap: 10rem;
+    align-items: start;
 }
 
 .footer-brand {
@@ -39,6 +40,8 @@
     font-size: 1rem;
     line-height: 1.65;
 }
+
+
 
 .footer-section h2 {
     margin: 0 0 0.85rem;

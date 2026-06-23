@@ -8,72 +8,125 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-</head>
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <script src="https://kit.fontawesome.com/9440d488f5.js" crossorigin="anonymous"></script></head>
 
 <body>
-    <header class="site-header">
-        <a href="/index.html" class="site-logo">djfox11.com</a>
+    <div id="site-header"></div>
 
-        <nav class="nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/projects/index.html">Projects</a></li>
-                <li><a href="/tutorials/index.html">Tutorials</a></li>
-                <li><a href="/tmr/index.html">The Models Resource</a></li>
-                <li><a href="/contact/index.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main class="contact-page">
+        <section class="contact-page-header">
+            <h1>Get In Touch</h1>
+            <p>
+                Have a question, spotted an issue with a tutorial, or want to chat about
+                a project? Send me a message and I’ll get back to you when I can.
+            </p>
+        </section>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-
-            <section class="footer-brand">
-                <a href="/index.html" class="footer-logo">djfox11.com</a>
+        <section class="contact-layout">
+            <aside class="contact-info-card">
+                <h2>Other places</h2>
                 <p>
-                    Game asset research, model ripping tutorials, projects,
-                    and technical notes.
+                    You can also find me around these places if that’s easier.
                 </p>
-            </section>
 
-            <nav class="footer-section" aria-label="Footer site navigation">
-                <h2>Site</h2>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/projects/index.html">Projects</a></li>
-                    <li><a href="/tutorials/index.html">Tutorials</a></li>
-                    <li><a href="/tmr/index.html">TMR</a></li>
-                    <li><a href="/contact/index.html">Contact</a></li>
-                </ul>
-            </nav>
+                <div class="contact-link-list">
+                    <a href="mailto:djfox11.tmr@gmail.com" target="_blank" class="contact-link">
+                        <span>Email</span>
+                        <span>djfox11.tmr@gmail.com</span>
 
-            <section class="footer-section">
-                <h2>Topics</h2>
-                <ul>
-                    <li><a href="/tutorials/index.html">Model ripping</a></li>
-                    <li><a href="/projects/index.html">Web projects</a></li>
-                    <li><a href="/tmr/index.html">The Models Resource</a></li>
-                    <li><a href="/tutorials/index.html">Game tools</a></li>
-                </ul>
-            </section>
+                        <span class="contact-link-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    </a>
 
-            <section class="footer-section">
-                <h2>Socials</h2>
-                <ul>
-                    <li><a href="https://www.models-resource.com/" target="_blank" rel="noopener noreferrer">The Models
-                            Resource</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                </ul>
-            </section>
+                    <a href="https://discord.com/users/509194362073251840" target="_blank" class="contact-link">
+                        <span>Discord</span>
+                        <span>@djfox11</span>
 
-        </div>
+                        <span class="contact-link-icon">
+                            <i class="fa-brands fa-discord"></i>
+                        </span>
+                    </a>
 
-        <div class="footer-bottom">
-            <p>© 2026 djfox11</p>
-        </div>
-    </footer>
+                    <a href="https://www.models-resource.com/profile/djfox11" target="_blank" class="contact-link">
+                        <span>The Models Resource</span>
+                        <span>djfox11</span>
+
+                        <span class="contact-link-icon">
+                            <img src="/assets/images/icons/tmr.svg">
+                        </span>
+                    </a>
+
+                    <a href="https://x.com/djfox11_" target="_blank" class="contact-link">
+                        <span>Twitter / X</span>
+                        <span>@djfox11_</span>
+
+                        <span class="contact-link-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </span>
+                    </a>
+                </div>
+            </aside>
+
+            <form id="contact-form" class="contact-form">
+                <input type="hidden" name="access_key" value="198dd2fe-ea58-4718-b561-1783ebc48904">
+                
+                <input type="hidden" name="from_name" value="djfox11.com Contact Form">
+                <input type="hidden" id="email-subject" name="subject" value="New Message on Contact Form">
+
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label id="reason-label">Reason</label>
+
+                    <div class="custom-select" data-custom-select>
+                        <input type="hidden" name="reason" id="reason">
+
+                        <button class="custom-select-button" type="button" aria-haspopup="listbox" aria-expanded="false"
+                            aria-labelledby="reason-label">
+                            <span data-selected-text>Choose one</span>
+                            <span class="custom-select-arrow"><i class="fa-solid fa-caret-down"></i></span>
+                        </button>
+
+                        <ul class="custom-select-menu" role="listbox">
+                            <li role="option" data-value="General enquiry">General enquiry</li>
+                            <li role="option" data-value="Project feedback">Project feedback</li>
+                            <li role="option" data-value="Tutorial correction">Tutorial correction</li>
+                            <li role="option" data-value="Collaboration">Collaboration</li>
+                            <li role="option" data-value="Other">Other</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit">
+                    Send message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="/assets/js/contact.js"></script>
+    <script src="/assets/js/includes.js"></script>
 </body>
 
 </html>
