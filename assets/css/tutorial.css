@@ -1,0 +1,821 @@
+/* =========================================================
+   Tutorial Page CSS
+   For individual game ripping tutorial pages
+========================================================= */
+
+/* -------------------------
+   Base page
+------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #f0f0f0;
+}
+
+.tutorial-page {
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.045), transparent 34rem),
+        #000;
+    color: #f0f0f0;
+}
+
+/* =========================================================
+   Cinematic tutorial hero
+========================================================= */
+
+.tutorial-hero {
+    position: relative;
+    min-height: clamp(520px, 68vh, 780px);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    isolation: isolate;
+    border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+
+.tutorial-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 42%;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, #000);
+}
+
+.tutorial-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    transform: scale(1.015);
+    filter: saturate(1.05) contrast(1.05);
+}
+
+/* Per-page helpers for awkward banner crops */
+.tutorial-hero-image-left {
+    object-position: left center;
+}
+
+.tutorial-hero-image-right {
+    object-position: right center;
+}
+
+.tutorial-hero-image-top {
+    object-position: center top;
+}
+
+.tutorial-hero-image-bottom {
+    object-position: center bottom;
+}
+
+.tutorial-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.96) 0%,
+            rgba(0,0,0,0.82) 18%,
+            rgba(0,0,0,0.35) 55%,
+            rgba(0,0,0,0.56) 100%
+        ),
+        radial-gradient(
+            circle at 22% 72%,
+            rgba(255,255,255,0.16),
+            transparent 34rem
+        ),
+        radial-gradient(
+            circle at 78% 26%,
+            rgba(255,255,255,0.08),
+            transparent 28rem
+        );
+}
+
+.tutorial-hero-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4.25rem;
+}
+
+.tutorial-back-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1.25rem;
+
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    transition:
+        color 150ms ease,
+        transform 150ms ease;
+}
+
+.tutorial-back-link:hover {
+    color: #fff;
+    transform: translateX(-2px);
+}
+
+.tutorial-back-link:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.38);
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+.tutorial-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 31px;
+    padding: 0 0.78rem;
+
+    color: #ededed;
+    background: rgba(0,0,0,0.46);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+    line-height: 1;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.tutorial-pill-easy {
+    background: rgba(26, 92, 54, 0.86);
+    border-color: rgba(120, 255, 170, 0.22);
+}
+
+.tutorial-pill-moderate {
+    background: rgba(107, 67, 14, 0.86);
+    border-color: rgba(255, 190, 90, 0.22);
+}
+
+.tutorial-pill-advanced {
+    background: rgba(107, 26, 26, 0.86);
+    border-color: rgba(255, 120, 120, 0.22);
+}
+
+.tutorial-hero h1 {
+    max-width: 980px;
+    margin: 0;
+
+    color: #fff;
+    font-size: clamp(2.85rem, 6.5vw, 6.8rem);
+    font-weight: 850;
+    line-height: 0.9;
+    letter-spacing: -0.078em;
+
+    text-wrap: balance;
+}
+
+.tutorial-hero-content > p {
+    max-width: 760px;
+    margin: 1.25rem 0 0;
+
+    color: rgba(255,255,255,0.78);
+    font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   Main tutorial layout
+========================================================= */
+
+.tutorial-layout {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+
+    display: grid;
+    grid-template-columns: 300px minmax(0, 860px);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    justify-content: center;
+    align-items: start;
+}
+
+.tutorial-content {
+    min-width: 0;
+}
+
+/* =========================================================
+   Sidebar
+========================================================= */
+
+.tutorial-sidebar {
+    position: sticky;
+    top: 96px;
+    display: grid;
+    gap: 1rem;
+}
+
+.tutorial-sidebar-card {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.045), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 1rem;
+
+    box-shadow:
+        0 18px 60px rgba(0,0,0,0.28),
+        inset 0 1px rgba(255,255,255,0.035);
+}
+
+.tutorial-sidebar-card h2 {
+    margin: 0 0 0.85rem;
+
+    color: #f0f0f0;
+    font-size: 0.82rem;
+    font-weight: 850;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.tutorial-sidebar-card nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.tutorial-sidebar-card a {
+    color: #a8a8a8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 650;
+    line-height: 1.35;
+
+    border-radius: 10px;
+    padding: 0.58rem 0.68rem;
+
+    transition:
+        color 150ms ease,
+        background 150ms ease,
+        transform 150ms ease;
+}
+
+.tutorial-sidebar-card a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.065);
+}
+
+.tutorial-sidebar-card a:active {
+    transform: scale(0.985);
+}
+
+.tutorial-sidebar-card a:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.34);
+    outline-offset: 2px;
+}
+
+/* Guide facts card */
+
+.tutorial-facts {
+    padding: 1.1rem;
+}
+
+.tutorial-facts dl {
+    margin: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.tutorial-facts div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.tutorial-facts dt {
+    color: #858585;
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.tutorial-facts dd {
+    margin: 0;
+    color: #e2e2e2;
+    font-size: 0.96rem;
+    line-height: 1.45;
+}
+
+/* =========================================================
+   Article typography
+========================================================= */
+
+.tutorial-section {
+    scroll-margin-top: 112px;
+    margin-bottom: 4.25rem;
+}
+
+.tutorial-section:last-child {
+    margin-bottom: 0;
+}
+
+.tutorial-updated {
+    width: fit-content;
+    margin: 0 0 1rem;
+
+    color: #cfcfcf;
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,255,255,0.105);
+    border-radius: 999px;
+    padding: 0.45rem 0.78rem;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.tutorial-intro {
+    margin: 0;
+
+    color: #e0e0e0;
+    font-size: clamp(1.18rem, 2vw, 1.45rem);
+    line-height: 1.72;
+    letter-spacing: -0.015em;
+}
+
+.tutorial-content h2 {
+    margin: 0 0 1rem;
+
+    color: #f5f5f5;
+    font-size: clamp(1.95rem, 3vw, 2.85rem);
+    font-weight: 850;
+    letter-spacing: -0.052em;
+    line-height: 1.02;
+
+    text-wrap: balance;
+}
+
+.tutorial-content h3 {
+    margin: 1.75rem 0 0.85rem;
+
+    color: #f0f0f0;
+    font-size: clamp(1.18rem, 1.6vw, 1.35rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.tutorial-content p {
+    margin: 0 0 1rem;
+
+    color: #bdbdbd;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.tutorial-content strong {
+    color: #eeeeee;
+    font-weight: 800;
+}
+
+.tutorial-content a {
+    color: #f5f5f5;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.tutorial-content a:hover {
+    color: #fff;
+}
+
+.tutorial-content ul,
+.tutorial-content ol {
+    color: #bdbdbd;
+    line-height: 1.75;
+}
+
+.tutorial-content li + li {
+    margin-top: 0.35rem;
+}
+
+/* =========================================================
+   Learning / requirements cards
+========================================================= */
+
+.tutorial-learn-box {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 20rem),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+
+    box-shadow: inset 0 1px rgba(255,255,255,0.035);
+}
+
+.tutorial-learn-box h2 {
+    margin-bottom: 0.85rem;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+}
+
+.tutorial-learn-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.requirement-card {
+    min-height: 100%;
+
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.045), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 1.15rem;
+
+    box-shadow: inset 0 1px rgba(255,255,255,0.035);
+}
+
+.requirement-card h3 {
+    margin-top: 0;
+}
+
+.requirement-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+/* =========================================================
+   Step list
+========================================================= */
+
+.tutorial-steps {
+    counter-reset: tutorial-step;
+    list-style: none;
+
+    display: grid;
+    gap: 0.75rem;
+
+    margin: 1rem 0 0;
+    padding-left: 0;
+}
+
+.tutorial-steps li {
+    counter-increment: tutorial-step;
+    position: relative;
+
+    color: #c8c8c8;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.035), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.085);
+    border-radius: 16px;
+
+    padding: 1rem 1rem 1rem 3.35rem;
+    line-height: 1.65;
+
+    box-shadow: inset 0 1px rgba(255,255,255,0.03);
+}
+
+.tutorial-steps li::before {
+    content: counter(tutorial-step);
+
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+
+    width: 1.48rem;
+    height: 1.48rem;
+    display: grid;
+    place-items: center;
+
+    color: #111;
+    background: #f0f0f0;
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* =========================================================
+   Notes / warnings / callouts
+========================================================= */
+
+.tutorial-note,
+.tutorial-warning {
+    margin: 1.25rem 0;
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+
+    font-size: 1rem;
+    line-height: 1.68;
+}
+
+.tutorial-note {
+    color: #d5d5d5;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.06), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.13);
+}
+
+.tutorial-warning {
+    color: #f0d9ad;
+    background:
+        linear-gradient(135deg, rgba(255, 184, 77, 0.12), transparent),
+        rgba(107, 67, 14, 0.2);
+    border: 1px solid rgba(255, 184, 77, 0.23);
+}
+
+.tutorial-note strong,
+.tutorial-warning strong {
+    color: #fff;
+}
+
+/* =========================================================
+   Figures / images in tutorial body
+========================================================= */
+
+.tutorial-figure {
+    margin: 1.6rem 0;
+}
+
+.tutorial-figure img {
+    width: 100%;
+    display: block;
+
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+
+    box-shadow:
+        0 24px 80px rgba(0,0,0,0.35),
+        inset 0 1px rgba(255,255,255,0.035);
+}
+
+.tutorial-figure figcaption {
+    margin-top: 0.7rem;
+
+    color: #8f8f8f;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   Code blocks
+========================================================= */
+
+.tutorial-content pre {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    padding: 1rem 1.1rem;
+
+    background: #0d0d0d;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+
+    box-shadow: inset 0 1px rgba(255,255,255,0.03);
+}
+
+.tutorial-content code {
+    color: #e7e7e7;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   FAQ / details
+========================================================= */
+
+.tutorial-content details {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.035), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+
+    box-shadow: inset 0 1px rgba(255,255,255,0.03);
+}
+
+.tutorial-content details + details {
+    margin-top: 0.75rem;
+}
+
+.tutorial-content summary {
+    cursor: pointer;
+    color: #f0f0f0;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.tutorial-content summary::marker {
+    color: #9f9f9f;
+}
+
+.tutorial-content details p {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   End navigation / next guide area
+   Optional HTML:
+   <nav class="tutorial-next">
+      <a href="#">← Previous guide</a>
+      <a href="#">Next guide →</a>
+   </nav>
+========================================================= */
+
+.tutorial-next {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.tutorial-next a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 90px;
+    padding: 1.1rem;
+
+    color: #f0f0f0;
+    text-decoration: none;
+
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.045), transparent),
+        #101010;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+
+    transition:
+        background 150ms ease,
+        border-color 150ms ease,
+        transform 150ms ease;
+}
+
+.tutorial-next a:hover {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.07), transparent),
+        #141414;
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 1100px) {
+    .tutorial-layout {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        gap: 2rem;
+    }
+
+    .tutorial-sidebar {
+        position: static;
+        order: -1;
+    }
+
+    .tutorial-sidebar-card nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tutorial-sidebar-card a {
+        background: rgba(255,255,255,0.04);
+    }
+
+    .tutorial-facts dl {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .tutorial-hero {
+        min-height: 540px;
+    }
+
+    .tutorial-hero-content {
+        padding: 7rem 1.25rem 3rem;
+    }
+
+    .tutorial-layout {
+        padding: 3rem 1.25rem 5rem;
+    }
+
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-facts dl {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-next {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .tutorial-hero {
+        min-height: 500px;
+    }
+
+    .tutorial-hero h1 {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+        letter-spacing: -0.065em;
+    }
+
+    .tutorial-hero-content > p {
+        font-size: 1rem;
+    }
+
+    .tutorial-meta {
+        gap: 0.4rem;
+    }
+
+    .tutorial-pill {
+        min-height: 29px;
+        padding: 0 0.65rem;
+        font-size: 0.84rem;
+    }
+
+    .tutorial-content h2 {
+        font-size: 2rem;
+    }
+
+    .tutorial-steps li {
+        padding: 0.95rem 0.95rem 0.95rem 3.1rem;
+    }
+
+    .tutorial-steps li::before {
+        left: 0.9rem;
+        top: 0.95rem;
+    }
+}
+
+/* =========================================================
+   Reduced motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .tutorial-hero-image {
+        transform: none;
+    }
+}
